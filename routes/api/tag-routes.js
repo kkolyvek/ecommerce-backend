@@ -24,7 +24,7 @@ router.get('/:id', async (req, res) => {
     });
     
     if (!tagData) {
-      res.status(404).json({ message: 'No product found with that id!' });
+      res.status(404).json({ message: 'No tags found with that id!' });
       return;
     };
 
@@ -52,7 +52,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!tagData) {
-      res.status(404).json({ message: 'No reader found with that id!' });
+      res.status(404).json({ message: 'No tag found with that id!' });
       return;
     }
 
