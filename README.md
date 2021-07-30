@@ -23,18 +23,32 @@ In order to interact with the api, the database must first be initialized and se
 1. Run `npm i` to installed required dependencies.
 2. Create a `.env` file with the following lines:
 
-   - `DB_USER= [your mysql username]`
-   - `DB_PW= [your mysql password]`
-   - `DB_NAME = ecommerce_db`
+   - `DB_USER=[your mysql username]`
+   - `DB_PW=[your mysql password]`
+   - `DB_NAME=ecommerce_db`
 
 3. Log in to mysql2 and run `SOURCE ./db/schema.sql` to initialize the database.
 4. Back in the terminal, run `node ./seeds/index.js` to seed the database.
 
+Refer to the video below for an example of the installation process.
+
+> ![Installation Video](./assets/readme/readme-install.gif)
+
 ## Usage
 
-Once the installation steps have been followed, the database can be interacted with. Refer to the video below for specific routes and request formatting.
+Once the installation steps have been followed, the database can be interacted with. Refer to the video belows for specific routes and request formatting.
 
-> ![API Demonstration Video](./assets/readme/readme-demo.gif)
+Category routes:
+
+> ![API Demonstration Video](./assets/readme/readme-categories.gif)
+
+Product routes:
+
+> ![API Demonstration Video](./assets/readme/readme-products.gif)
+
+Tag routes:
+
+> ![API Demonstration Video](./assets/readme/readme-tags.gif)
 
 ## License
 
