@@ -1,4 +1,3 @@
-
 <h1 align="center"><strong>E-Commerce Backend</strong></h1>
 
 <p align="center">
@@ -8,18 +7,34 @@
 
 ## Description
 
+This repository is an example of a basic e-commerce backend layout that uses express and sequelize. It includes 3 main models; categories, products, and tags. Each category can have multiple products but a product can only exist in one category. However, each product can have multiple tags while each tag can be linked to multiple products. This relationship is defined using the product-tags pivot table.
+
 ## Table of Contents
 
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [License](#license)
-4. [Contributing](#contributing)
-5. [Tests](#tests)
-6. [Questions](#questions)
-    
+4. [Questions](#questions)
+
 ## Installation
 
+In order to interact with the api, the database must first be initialized and seeded. Follow the steps below to install.
+
+1. Run `npm i` to installed required dependencies.
+2. Create a `.env` file with the following lines:
+
+   - `DB_USER= [your mysql username]`
+   - `DB_PW= [your mysql password]`
+   - `DB_NAME = ecommerce_db`
+
+3. Log in to mysql2 and run `SOURCE ./db/schema.sql` to initialize the database.
+4. Back in the terminal, run `node ./seeds/index.js` to seed the database.
+
 ## Usage
+
+Once the installation steps have been followed, the database can be interacted with. Refer to the video below for specific routes and request formatting.
+
+> ![API Demonstration Video](./assets/readme/readme-demo.gif)
 
 ## License
 
@@ -49,10 +64,6 @@ OTHER DEALINGS IN THE SOFTWARE.
 For more information, please refer to <http://unlicense.org/>
 
 ---
-
-## Contributing
-
-## Tests
 
 ## Questions
 
