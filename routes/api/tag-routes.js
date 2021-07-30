@@ -34,12 +34,36 @@ router.get('/:id', async (req, res) => {
   };
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   // create a new tag
+  try {
+    // create a new tag with key tag_name
+    const tagData = await Tag.create({
+      tag_name: req.body.tag_name,
+    });
+
+    // send successful data back
+    res.status(200).json(tagData);
+  } catch (err) {
+    // send error if unsuccessful
+    res.status(500).json(err);
+  };
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
   // update a tag's name by its `id` value
+  try {
+    // find tag by id and update name field
+    const tagData = await Tag.findByPk(req.params.id);
+    tagData.tag_name = req.body.tag_name;
+    await tagData.save();
+  
+    // send saved tag back
+    res.status(200).json(tagData);
+  } catch (err) {
+    // send error if unsuccessful
+    res.status(500).json(err);
+  };
 });
 
 router.delete('/:id', async (req, res) => {
